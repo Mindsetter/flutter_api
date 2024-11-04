@@ -24,11 +24,13 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  @override
-  void initState() {
-    super.initState();
-    Future.delayed(const Duration(seconds: 5), () {
-      print('Hello World');
+  late String _text = 'Fetching Data....';
+  void changeText() {
+    Future.delayed(const Duration(seconds: 2), () => 'Data Retreived')
+        .then((value) {
+      setState(() {
+        _text = value;
+      });
     });
   }
 
@@ -39,16 +41,25 @@ class _MyHomePageState extends State<MyHomePage> {
         title: const Text('API Tutorials'),
         centerTitle: true,
       ),
-      body: const Center(
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Data',
-              style: TextStyle(
-                fontSize: 18,
+              _text,
+              style: const TextStyle(
+                fontSize: 30,
                 fontWeight: FontWeight.bold,
               ),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: changeText,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue,
+                foregroundColor: Colors.white,
+              ),
+              child: const Text('Press Me'),
             ),
           ],
         ),
