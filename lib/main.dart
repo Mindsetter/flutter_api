@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_api/async_await_demo.dart';
 import 'package:flutter_api/stream_demo.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: StreamDemo(),
+      home: AsyncDemo(),
     );
   }
 }
