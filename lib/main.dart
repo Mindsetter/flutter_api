@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_api/http_client_demo.dart';
+import 'package:flutter_api/http_dio_demo.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: HttpClientDemo(),
+      home: HttpDioDemo(),
     );
   }
 }
