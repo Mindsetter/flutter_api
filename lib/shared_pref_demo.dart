@@ -41,7 +41,7 @@ class _SharedPrefDemoState extends State<SharedPrefDemo> {
         child: Text(
           '$_text',
           style: const TextStyle(
-            fontSize: 22,
+            fontSize: 24,
             fontWeight: FontWeight.bold,
           ),
         ),
