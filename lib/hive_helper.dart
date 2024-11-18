@@ -3,14 +3,12 @@ import 'package:hive_flutter/hive_flutter.dart';
 class HiveHelper {
   // Get the opened Box
   static final _gloceryList = Hive.box('glocery_list');
-
   // Read Data from Hive in Map<String, dynamic>
   static List<Map<String, dynamic>> getGloceries() {
     // Get data according it key
     var gloceryList = _gloceryList.keys.map((key) {
       // Get key assign value
       var value = _gloceryList.get(key);
-
       return {
         "key": key,
         "item": value['item'],
