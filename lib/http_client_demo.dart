@@ -33,9 +33,7 @@ class _HttpClientDemoState extends State<HttpClientDemo> {
           ),
           Expanded(
             child: SingleChildScrollView(
-              child: Container(
-                child: Text(_respond),
-              ),
+              child: Text(_respond),
             ),
           ),
         ],

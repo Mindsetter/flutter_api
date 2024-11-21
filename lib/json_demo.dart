@@ -1,8 +1,5 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_api/user_model.dart';
-import 'package:http/http.dart' as http;
 import 'package:dio/dio.dart';
 
 class JsonDemo extends StatefulWidget {
@@ -35,9 +32,7 @@ class _JsonDemoState extends State<JsonDemo> {
           ),
           Expanded(
             child: SingleChildScrollView(
-              child: Container(
-                child: Text(_respond),
-              ),
+              child: Text(_respond),
             ),
           ),
         ],
@@ -59,8 +54,8 @@ class _JsonDemoState extends State<JsonDemo> {
       );
       User data = User.fromJson(respond.data);
       _respond = data.title!;
-      print(data.body);
-      print(respond.statusCode);
+      // print(data.body);
+      // print(respond.statusCode);
     } catch (e) {
       // return errors
       _respond = 'Error here: $e';

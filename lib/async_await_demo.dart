@@ -19,7 +19,7 @@ class _AsyncDemoState extends State<AsyncDemo> {
 
   // Create async function to get Person info
   Future<Person> getPeronInfo(int id) async {
-    print('Searching person info.......');
+    // print('Searching person info.......');
     await Future.delayed(const Duration(seconds: 2));
     switch (id) {
       case 1:

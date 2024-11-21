@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 import 'package:dio/dio.dart';
 
 class HttpDioDemo extends StatefulWidget {
@@ -32,9 +31,7 @@ class _HttpDioDemoState extends State<HttpDioDemo> {
           ),
           Expanded(
             child: SingleChildScrollView(
-              child: Container(
-                child: Text(_respond),
-              ),
+              child: Text(_respond),
             ),
           ),
         ],
@@ -52,8 +49,8 @@ class _HttpDioDemoState extends State<HttpDioDemo> {
       var respond = await dio.post('https://jsonplaceholder.typicode.com/posts',
           data: {'name': 'Ebo', 'userId': '88', 'title': 'Flutter Http'});
       _respond = respond.data.toString();
-      print(respond.data.toString());
-      print(respond.statusCode);
+      // print(respond.data.toString());
+      // print(respond.statusCode);
     } catch (e) {
       // return errors
       _respond = 'Error here: $e';
